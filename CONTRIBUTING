@@ -1,0 +1,36 @@
+## Contribution Guidelines
+
+To contribute to the repository, please consider the conventions in this short document.
+
+### Automated Code Linting and Testing
+
+To ensure that new changes follow good code formatting standards and at least do not break existing tests, setup Git pre-commit hooks using `pre-commit`:
+
+```bash
+pip install pre-commit==2.14.0 # install pre-commit using pip
+pre-commit install             # setup the git hook scripts
+pre-commit run --all-files     # test the setup by running the hooks
+```
+
+### Git Branching Model and Package Versioning Scheme
+
+#### Branching Workflow
+
+The branching model used in this repository follows the [GitFlow model](https://nvie.com/posts/a-successful-git-branching-model).
+
+Aside from the main branches `master` and `develop`, branch names are as follows:
+- Feature branches: `feat/short-feature-description`
+- Bug fix branches: `bug/short-bug-fix-description`
+- Release branches: `release/release-version`
+- Hotfix branches: `hotfix/hotfix-version`
+
+#### Versioning Scheme
+
+The package versioning loosely follows the "Semantic Versioning" scheme. 
+
+Versions look like `X.Y.Z`, where:
+- `Z` is incremented when a bug is fixed
+- `Y` is incremented when new features are introduced
+- `X` is incremented when major new features or breaking changes are introduced
+
+Versions are tracked in `biobb_md_setup/version.py` as well as release and hotfix branches.

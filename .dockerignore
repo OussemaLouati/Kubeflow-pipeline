@@ -1,0 +1,4 @@
+notebooks/
+env373/
+deployment/**/*
+venv/
